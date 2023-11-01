@@ -1,11 +1,11 @@
 import os
 
 print("Starting Code...")
-os.system('git status')
 print('git status')
-os.system('git add .')
+os.system('git status')
 print('git add .')
+os.system('git add .')
 message = input('Enter Your Message, Please add quotes to your message:')
 os.system('git commit -m ' + message) 
-os.system('git push')
 print('git push')
+os.system('git push')
