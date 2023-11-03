@@ -20,9 +20,11 @@ while True:
         print()
         print('git push')
         os.system('git push')
+        break #Ends code here
     elif confirmMessage in no:
         print()
         print('You have cancelled this push')
+        break #Ends code here
     else:
         print()
         print('Please enter a valid answer, and try again')
