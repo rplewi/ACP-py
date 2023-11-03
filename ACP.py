@@ -1,3 +1,4 @@
+
 import os
 yes = {'yes','y'}
 no = {'no', 'n'}
@@ -7,22 +8,24 @@ print('git status')
 os.system('git status')
 print('git add .')
 os.system('git add .')
-try:
+while True:
     message = input('Enter Your Message: ')
-    os.system('git commit -m ' + message) 
     if not message:
-        raise ValueError()
+        print('Please enter a valid message')
+        continue
+
+    os.system('git commit -m "' + message + '"') 
+
     confirmMessage = input('Please Confirm that you want to push this branch (y or n): ' )
     if confirmMessage in yes:
         print()
         print('git push')
         os.system('git push')
+        break #Ends code here
     elif confirmMessage in no:
         print()
         print('You have cancelled this push')
+        break #Ends code here
     else:
         print()
-        print('Please select an actual answer, and restart')
-except:
-    print()
-    print('error, please make sure you add a comment, and try again.')
+        print('Please enter a valid answer, and try again')
