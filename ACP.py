@@ -10,7 +10,7 @@ os.system('git add .')
 message = input('Enter Your Message, Please add quotes to your message: ')
 os.system('git commit -m ' + message) 
 confirmMessage = input('Please Confirm that you want to push this branch (y or n): ' )
-choice = raw_input().lower()
+choice = input().lower()
 if choice in yes:
     print('git push')
     os.system('git push')
