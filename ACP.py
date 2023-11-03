@@ -8,7 +8,7 @@ os.system('git status')
 print('git add .')
 os.system('git add .')
 try:
-    message = input('Enter Your Message, Please add quotes to your message: ')
+    message = input('Enter Your Message: ')
     os.system('git commit -m ' + message) 
     if not message:
         raise ValueError()
