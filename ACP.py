@@ -7,14 +7,18 @@ print('git status')
 os.system('git status')
 print('git add .')
 os.system('git add .')
-message = input('Enter Your Message, Please add quotes to your message: ')
-os.system('git commit -m ' + message) 
+try:
+    message = input('Enter Your Message, Please add quotes to your message: ')
+    os.system('git commit -m ' + message) 
+    if not message:
+        raise ValueError()
+except ValueError as e:
+    print(e)
 confirmMessage = input('Please Confirm that you want to push this branch (y or n): ' )
-choice = input().lower()
-if choice in yes:
+if confirmMessage in yes:
     print('git push')
     os.system('git push')
-elif choice in no:
+elif confirmMessage in no:
     print('You have cancelled this push')
 else:
-    print('Please select and actual answer')
+    print('Please select and actual answer, and restart')
