@@ -7,6 +7,8 @@ force = {'f'}
 
 def push():
     while True:
+        confirmMessage = input(
+            'Please Confirm that you want to push this branch (y or n): ')
         if confirmMessage in yes:
             print()
             print('git push')
@@ -34,7 +36,5 @@ while True:
         continue
     elif message:
         os.system('git commit -m "' + message + '"')
-        confirmMessage = input(
-            'Please Confirm that you want to push this branch (y or n): ')
         push()
         break
