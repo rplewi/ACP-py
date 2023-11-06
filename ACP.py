@@ -4,17 +4,22 @@ yes = {'yes', 'y'}
 no = {'no', 'n'}
 force = {'f'}
 
+
 def push():
-    if confirmMessage in yes:
-        print()
-        print('git push')
-        os.system('git push')
-    elif confirmMessage in no:
-        print()
-        print('You have cancelled this push')
-    else:
-        print()
-        print('Please enter a valid answer, and try again')
+    while True:
+        if confirmMessage in yes:
+            print()
+            print('git push')
+            os.system('git push')
+            break
+        elif confirmMessage in no:
+            print()
+            print('You have cancelled this push')
+            break
+        else:
+            print()
+            print('Please enter a valid answer, and try again')
+
 
 print("Starting Code...")
 print('git status')
@@ -29,6 +34,7 @@ while True:
         continue
     elif message:
         os.system('git commit -m "' + message + '"')
-        confirmMessage = input('Please Confirm that you want to push this branch (y or n): ')
+        confirmMessage = input(
+            'Please Confirm that you want to push this branch (y or n): ')
         push()
         break
