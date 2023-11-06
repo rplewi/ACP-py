@@ -1,9 +1,8 @@
 
 import os
-yes = {'yes', 'y'}
+yes = {'yes','y'}
 no = {'no', 'n'}
 force = {'f'}
-
 
 def push():
     while True:
@@ -21,7 +20,6 @@ def push():
         else:
             print()
             print('Please enter a valid answer, and try again')
-
 
 print("Starting Code...")
 print('git status')
