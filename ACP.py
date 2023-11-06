@@ -38,6 +38,7 @@ while True:
         os.system("git commit -m \"forced\"")
         os.system("git push")
         print("You have bypassed a commit message. Have a good day!")
+        break
     elif message:
         os.system('git commit -m "' + message + '"')
         push()
