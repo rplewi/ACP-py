@@ -34,6 +34,10 @@ while True:
     if not message:
         print('Please enter a valid message')
         continue
+    elif message == "f":
+        os.system("git commit -m \"forced\"")
+        os.system("git push")
+        print("You have bypassed a commit message. Have a good day!")
     elif message:
         os.system('git commit -m "' + message + '"')
         push()
